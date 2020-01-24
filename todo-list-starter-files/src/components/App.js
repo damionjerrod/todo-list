@@ -11,6 +11,8 @@ class App extends Component {
   state = {
     list: [],
     pendingItem: "",
+    date: new Date(),
+    show: false
   };
 
   handleItemInput = e => {
@@ -40,11 +42,44 @@ class App extends Component {
     this.setState({
       list: newState
     });  
-  };  
+  };
+
+  onChange = date => {
+    this.setState({ date })
+};
+
+  showModal = () => {
+    this.setState({
+      show: true
+    });
+  };
+
+  hideModal = () => {
+    this.setState({
+      show: false
+    });
+  };
 
   render() {
     return (
       <div className="wrapper">
+       <div className="App">
+        <header>
+          <div id="logo">
+            <span>
+              <b>To Do Schedule</b>
+            </span>
+          </div>
+        </header>
+        <main>
+          {/* <button type="button" onClick={this.showModal}>open</button> */}
+          <MyCalendar
+          onChange={this.onChange}
+          onDateSelect={this.showModal}
+          date={this.state.date}
+          value={this.state.date}
+          />
+        </main>
        <InputForm 
         className="input"
         type="text"
@@ -53,22 +88,13 @@ class App extends Component {
         pendingItem={this.state.pendingItem}
         value={this.state.pendingItem}
         placeholder="Add an item"
+        show={this.state.show}
+        handleClose={this.hideModal}
        />
        <List 
         list={this.state.list}
         handleRemove={this.handleRemove}
        />
-       <div className="App">
-        <header>
-          <div id="logo">
-            <span>
-              My<b> Schedule</b>
-            </span>
-          </div>
-        </header>
-        <main>
-          <MyCalendar />
-        </main>
        </div>
       </div>
     );
