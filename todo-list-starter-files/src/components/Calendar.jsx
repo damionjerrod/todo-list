@@ -2,8 +2,8 @@ import React from 'react';
 import Calendar from 'react-calendar';
 
 const MyCalendar = props => {
-    console.log(props.point);
-    console.log();
+    console.log(props.onClickDay);
+    console.log(props.date.getDay());
 
     return (
         <div>
