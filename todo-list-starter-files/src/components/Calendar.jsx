@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 
 const MyCalendar = props => {
     console.log(props.point);
-    console.log(props.valueType);
+    console.log();
 
     return (
         <div>
