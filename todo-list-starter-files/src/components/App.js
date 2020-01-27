@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import "../styles/reset.css";
 import "../styles/App.css";
 import "../styles/Calendar.css";
-import InputForm from './InputForm';
-import List from './List';
-import MyCalendar from './Calendar';
-import moment from 'moment';
+import InputForm from "./InputForm";
+import List from "./List";
+import MyCalendar from "./Calendar";
+import moment from "moment";
 
 class App extends Component {
-  // getInitialState
   state = {
     list: [],
     pendingItem: "",
@@ -16,12 +15,14 @@ class App extends Component {
     show: false
   };
 
+  // takes the given input and updates the pendingItem state
   handleItemInput = e => {
     this.setState({
       pendingItem: e.target.value
     });
   };
   
+  // creates a list from multiple entries
   newItemSubmitHandler = e => {
     e.preventDefault();
     this.setState({
@@ -34,9 +35,9 @@ class App extends Component {
       ],
       pendingItem: ""
     });
-    console.log(this.state);
   };
 
+  // removes one item from the current list
   handleRemove = index => {
     const newState = this.state.list.filter(item => {
       return this.state.list.indexOf(item) !== index
@@ -47,6 +48,7 @@ class App extends Component {
     });  
   };
 
+  // changes the state of date to selected calendar date & show from false to true
   onChange = date => {
     this.setState({ 
       date,
@@ -60,6 +62,7 @@ class App extends Component {
   //   });
   // };
 
+  // changes the state of show back to false
   hideModal = () => {
     this.setState({
       show: false
@@ -78,7 +81,6 @@ class App extends Component {
           </div>
         </header>
         <main>
-          {/* <button type="button" onClick={this.showModal}>open</button> */}
           <MyCalendar
           onChange={this.onChange}
           date={this.state.date}
