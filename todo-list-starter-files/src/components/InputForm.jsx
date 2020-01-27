@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Modal.css";
 
 const InputForm = props => {
     // const showHide = props.show ? "modal display-block" : "modal display-none";    
@@ -6,7 +7,7 @@ const InputForm = props => {
         return null;
     }
     return (
-        <div>
+        <div className="modal-content">
             <form 
                 onSubmit={props.newItemSubmitHandler}
                 className="todoInput">

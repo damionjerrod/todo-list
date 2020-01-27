@@ -1,5 +1,4 @@
 /* FONT IMPORTS */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
@@ -23,19 +22,18 @@
 
 
 /* VARIABLES */
-
 :root {
   --main-color: #1a8fff;
-  /* --text-color: #fff; */
+  --text-color: #000;
   --text-color-light: #ccc;
   --border-color: #eee;
+  --cal-border-color: #000;
   --bg-color: #f9f9f9;
   --neutral-color: #fff;
 }
 
 
 /* GENERAL */
-
 * {
   box-sizing: border-box;
 }
@@ -58,27 +56,27 @@ header {
   background: var(--neutral-color);
 }
 
-header #logo {
+header #title {
   font-size: 175%;
   text-align: center;
   color: var(--main-color);
   line-height: 1;
 }
 
-header #logo .icon {
+/* header #logo .icon {
   padding-right: .25em;
-}
+} */
 
 main {
   display: block;
   margin: 0 auto;
   margin-top: 5em;
+  margin-left: 1em;
   max-width: 50em;
 }
 
 
 /* GRID */
-
 .row {
   margin: 0;
   padding: 0;
@@ -115,13 +113,18 @@ main {
 
 
 /* Calendar */
-
 .calendar {
   display: block;
   position: relative;
   width: 100%;
   background: var(--neutral-color);
   border: 1px solid var(--border-color);
+}
+
+.react-calendar {
+  border-radius: 3%;
+  box-shadow: 0 0 6px 2px rgba(0,0,0,.15);
+  border: none !important;
 }
 
 .calendar .header {

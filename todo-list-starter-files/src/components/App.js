@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/reset.css";
 import "../styles/App.css";
 import "../styles/Calendar.css";
+import "../styles/Modal.css";
 import InputForm from "./InputForm";
 import List from "./List";
 import MyCalendar from "./Calendar";
@@ -72,11 +73,11 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-       <div className="App">
+       <div>
         <header>
-          <div id="logo">
+          <div id="title">
             <span>
-              <b>To Do Schedule</b>
+              <b>My Schedule</b>
             </span>
           </div>
         </header>
