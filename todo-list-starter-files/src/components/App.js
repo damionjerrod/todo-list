@@ -19,7 +19,7 @@ class App extends Component {
     this.setState({
       pendingItem: e.target.value
     });
-  }
+  };
     
   newItemSubmitHandler = e => {
     e.preventDefault();
@@ -46,7 +46,7 @@ class App extends Component {
 
   onChange = date => {
     this.setState({ date })
-};
+  };
 
   showModal = () => {
     this.setState({
