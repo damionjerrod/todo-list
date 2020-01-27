@@ -26,12 +26,14 @@ class App extends Component {
     this.setState({
       list: [
         {
-          name: this.state.pendingItem
+          name: this.state.pendingItem,
+          date: this.state.date
         },
         ...this.state.list
       ],
       pendingItem: ""
     });
+    console.log(this.state);
   };
 
   handleRemove = index => {
@@ -75,7 +77,6 @@ class App extends Component {
           {/* <button type="button" onClick={this.showModal}>open</button> */}
           <MyCalendar
           onChange={this.onChange}
-          onDateSelect={this.showModal}
           date={this.state.date}
           value={this.state.date}
           />
@@ -88,7 +89,7 @@ class App extends Component {
         pendingItem={this.state.pendingItem}
         value={this.state.pendingItem}
         placeholder="Add an item"
-        show={this.state.show}
+        show={true}
         handleClose={this.hideModal}
        />
        <List 
