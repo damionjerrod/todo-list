@@ -5,6 +5,7 @@ import "../styles/Calendar.css";
 import InputForm from './InputForm';
 import List from './List';
 import MyCalendar from './Calendar';
+import moment from 'moment';
 
 class App extends Component {
   // getInitialState
@@ -20,14 +21,14 @@ class App extends Component {
       pendingItem: e.target.value
     });
   };
-    
+  
   newItemSubmitHandler = e => {
     e.preventDefault();
     this.setState({
       list: [
         {
           name: this.state.pendingItem,
-          date: this.state.date
+          date: JSON.stringify(moment(this.state.date).format("dddd, MMMM Do YYYY"))
         },
         ...this.state.list
       ],
@@ -92,7 +93,7 @@ class App extends Component {
         show={true}
         handleClose={this.hideModal}
        />
-       <List 
+       <List
         list={this.state.list}
         handleRemove={this.handleRemove}
        />

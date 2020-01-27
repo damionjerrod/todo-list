@@ -9,6 +9,7 @@ const List = props => {
                     key={index}
                     item={item.name}
                     itemIndex={index}
+                    itemDate={item.date}
                     handleRemove={props.handleRemove}
                 />
             ))}
