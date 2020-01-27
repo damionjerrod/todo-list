@@ -48,14 +48,17 @@ class App extends Component {
   };
 
   onChange = date => {
-    this.setState({ date })
-  };
-
-  showModal = () => {
-    this.setState({
+    this.setState({ 
+      date,
       show: true
     });
   };
+
+  // showModal = () => {
+  //   this.setState({
+  //     show: true
+  //   });
+  // };
 
   hideModal = () => {
     this.setState({
@@ -90,7 +93,7 @@ class App extends Component {
         pendingItem={this.state.pendingItem}
         value={this.state.pendingItem}
         placeholder="Add an item"
-        show={true}
+        show={this.state.show}
         handleClose={this.hideModal}
        />
        <List
