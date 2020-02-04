@@ -1,23 +1,24 @@
-.modal {
-    position: fixed; 
-    top: 0px;
-    bottom: 0px;
-    left: 0px; 
-    right: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 50px;
-  }
+/*.modal {*/
+/*    position: fixed; */
+/*    top: 0px;*/
+/*    bottom: 0px;*/
+/*    left: 0px;*/
+/*    right: 0px;*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    padding: 50px;*/
+/*  }*/
 
   .modal-content {
-    background-color: white;
-    border-radius: 5%;
-    max-width: 600px;
-    min-height: 300;  
-    margin: auto;
-    margin-top: 300px;
-    margin-bottom: 100px;
-    padding: 50px; 
-    position: relative; 
+    /*background-color: white;*/
+    /*border-radius: 5%;*/
+    /*max-width: 600px;*/
+    /*min-height: 300;*/
+    /*!*margin: auto;*!*/
+    /*margin-top: 300px;*/
+    /*margin-bottom: 100px;*/
+    /*padding: 50px;*/
+    /*position: relative;*/
+    box-shadow: 0 0 20px 10px rgba(0,0,0,.12);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
@@ -32,14 +33,40 @@
   padding: 15px 25px;
   border-radius: 4px; */
 
+  .input-box {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .input-title {
+    position: relative;
+    margin-left: 125px;
+    margin-bottom: 30px;
+  }
+
+  .submit-btn {
+    cursor: pointer;
+    background-color: #1a8fff;
+  }
+
   .close-btn {
-    float: right; 
-    color: #000; 
-    /* font-size: 24px;  
+    border: 2px solid #1a8fff;
+    background-color: #fff;
+    padding: 5px 17px;
+    font-size: 12px;
+    color: #000;
+    position: relative;
+    margin-left: 215px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    /*float: left;*/
+    /* font-size: 24px;
     font-weight: bold; */
   }
 
   .close-btn:hover {
+    background-color: #1a8fff;
     color: #fff;
   }
 

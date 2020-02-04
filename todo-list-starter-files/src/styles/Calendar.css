@@ -125,6 +125,7 @@ main {
   border-radius: 3%;
   box-shadow: 0 0 6px 2px rgba(0,0,0,.15);
   border: none !important;
+  margin-bottom: 75px;
 }
 
 .calendar .header {

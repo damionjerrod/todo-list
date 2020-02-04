@@ -18,7 +18,7 @@ const modalStyle = {
     minHeight: 200,
     margin: "0 auto",
     marginTop: 200,
-    marginBottom: 100,
+    marginBottom: 50,
     padding: 50,
     position: "relative"
 }
@@ -34,13 +34,15 @@ const InputForm = props => {
                 <form 
                     onSubmit={props.newItemSubmitHandler}
                     >
+                    <p className="input-title">Enter To Do Item for Selected Date</p>
                     <input
+                        className="input-box"
                         type="text"
                         onChange={props.handleItemInput}
                         value={props.pendingItem}
                         placeholder="Add an item"
                         />
-                    <button type="submit" name="submit" value="submit">
+                    <button type="submit" clasName="submit-btn" name="submit" value="submit">
                         add
                     </button>
                     <button type="button" className="close-btn" onClick={props.handleClose}>Close</button>

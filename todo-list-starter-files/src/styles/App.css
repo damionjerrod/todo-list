@@ -12,7 +12,7 @@ body {
   font-family: sans-serif;
 }
 
-.wrapper {
+.appWrapper {
   max-width: 480px;
   margin: auto;
   background: #fff;
@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 50px;
+  padding-bottom: 10px;
 }
 
 .title {
@@ -50,7 +51,6 @@ input {
 
 button {
   background: #62c7ff;
-  border: none;
   font-size: 1rem;
   font-weight: 300;
   font-family: "Lato", sans-serif;
@@ -80,11 +80,16 @@ img {
 }
 
 button.action {
-  color: #333;
+  color: #1a8fff;
   background: none;
-  padding: 0;
+  border: 2px solid #1a8fff;
+  border-radius: 15px;
+  padding: 2px 7px;
+  cursor: pointer;
 }
 
-button.action:focus {
-  outline: none;
+button.action:hover {
+  border: 2px solid #f44336;
+  background: #f44336;
+  color: #fff;
 }
