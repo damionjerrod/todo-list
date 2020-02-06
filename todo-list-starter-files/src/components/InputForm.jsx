@@ -17,9 +17,9 @@ const modalStyle = {
     maxWidth: 600,
     minHeight: 200,
     margin: "0 auto",
-    marginTop: 200,
+    marginTop: 250,
     marginBottom: 50,
-    padding: 50,
+    padding: 10,
     position: "relative"
 }
 
@@ -34,6 +34,9 @@ const InputForm = props => {
                 <form 
                     onSubmit={props.newItemSubmitHandler}
                     >
+                    <div>
+                    <button type="button" className="close-btn" onClick={props.handleClose}>x</button>
+                    </div>
                     <p className="input-title">Enter To Do Item for Selected Date</p>
                     <input
                         className="input-box"
@@ -42,10 +45,9 @@ const InputForm = props => {
                         value={props.pendingItem}
                         placeholder="Add an item"
                         />
-                    <button type="submit" clasName="submit-btn" name="submit" value="submit">
+                    <button type="submit" className="add-btn" name="submit" value="submit">
                         add
                     </button>
-                    <button type="button" className="close-btn" onClick={props.handleClose}>Close</button>
                 </form>
             </div>
         </div>

@@ -65,10 +65,10 @@ ul {
 
 li {
   font-weight: 300;
-  padding: 20px 0 20px 0;
+  padding: 20px 10px 20px 10px;
   border-top: 1px solid #eee;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 
 /* .logo-container {
@@ -79,17 +79,33 @@ img {
   height: 25px;
 }
 
-button.action {
-  color: #1a8fff;
-  background: none;
-  border: 2px solid #1a8fff;
-  border-radius: 15px;
+/*  background: #62c7ff;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  padding: 15px 25px;
+  border-radius: 4px;
+*/
+
+.remove-btn {
+  color: #fff;
+  background: #006edc;
+  border: 2px solid #006edc;
+  /*border-radius: 15px;*/
   padding: 2px 7px;
   cursor: pointer;
+  width: 28px;
+  height: 28px;
 }
 
-button.action:hover {
+.remove-btn:hover {
   border: 2px solid #f44336;
   background: #f44336;
   color: #fff;
+}
+
+.todo-item {
+  /*display: inline-block;*/
+  margin-left: 10px;
+  -webkit-text-stroke: medium;
 }

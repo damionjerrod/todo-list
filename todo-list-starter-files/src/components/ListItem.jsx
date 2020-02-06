@@ -3,12 +3,14 @@ import React from "react";
 const ListItem = props => {
     return (
         <li>
-            {props.item} - {props.itemDate}
-            <button className="action" onClick={
+            <button className="remove-btn" onClick={
                 () => {props.handleRemove(props.itemIndex)}
             }>
                 x
             </button>
+            <div className="todo-item">
+            {props.item} - {props.itemDate}
+            </div>
         </li>
     );
 };
